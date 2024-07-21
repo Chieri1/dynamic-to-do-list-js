@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create a new li element
         const listItem = document.createElement('li');
         listItem.textContent = taskText;
+        listItem.classList.add('task-item'); // Optional: Add a class for styling if needed
 
         // Create a new button element for removing the task
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn'); // Add class for styling
 
         // Assign an onclick event to the remove button
         removeButton.onclick = function() {
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Append the remove button to the li element
         listItem.appendChild(removeButton);
-        
+
         // Append the li element to the task list
         taskList.appendChild(listItem);
 
@@ -78,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 
 
