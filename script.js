@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
-    const errorMessage = document.getElementById('error-message');
 
     // Load tasks from Local Storage
     loadTasks();
@@ -10,12 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function addTask(taskText, save = true) {
         // Check if taskText is not empty
         if (!taskText) {
-            errorMessage.textContent = 'Please enter a task.';
+            alert('Please enter a task.');
             return;
         }
-
-        // Clear any existing error message
-        errorMessage.textContent = '';
 
         // Create list item
         const listItem = document.createElement('li');
@@ -73,5 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 
